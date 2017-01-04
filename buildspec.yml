@@ -1,15 +1,15 @@
---- 
-artifacts: 
-  - MyBuild
-phases: 
-  build: 
-    commands: 
-      - "echo Build started on `date`"
-      - "echo Compiling the Ruby code..."
-  install: 
-    commands: 
-      - "echo Installing RSpec..."
-  post_build: 
-    commands: 
-      - "echo Build completed on `date`"
 version: 0.1
+
+phases:
+  install:
+    commands:
+      - echo Installing RSpec...
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Compiling the Ruby code...
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  - MyBuild
